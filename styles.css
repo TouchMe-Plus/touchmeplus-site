@@ -358,10 +358,33 @@ h1{
   padding: 26px 0;
 }
 .footer__inner{
-  display:grid;
-  grid-template-columns: 1fr auto auto;
-  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
   align-items: center;
+  justify-content: space-between;
+}
+
+.footer__brand{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  min-width: 240px;
+}
+
+.footer__links{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  justify-content: center;
+  font-weight: 700;
+  color: rgba(229,231,235,0.88);
+}
+
+.footer__copy{
+  font-size: 13px;
+  color: rgba(229,231,235,0.70);
+  white-space: nowrap;
 }
 .footer__name{ font-weight: 900; letter-spacing: -0.01em; }
 .footer__tagline{ color: rgba(229,231,235,0.75); font-size: 13px; margin-top: 4px; }
