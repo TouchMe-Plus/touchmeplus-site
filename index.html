@@ -99,36 +99,43 @@
             <h2 class="card__title">Quick Redirect</h2>
             <p class="card__text">Use this landing page to introduce TouchMe+ and send users to the booking platform.</p>
 
-            <div class="mini-form">
-              <div class="mini-form__row">
-                <div class="mini-input">
-                  <label>From</label>
-                  <div class="mini-input__box">Type departure location</div>
-                </div>
-                <div class="mini-input">
-                  <label>To</label>
-                  <div class="mini-input__box">Type destination</div>
-                </div>
-              </div>
+            <form class="mini-form" id="redirectForm">
+  <div class="mini-form__row">
+    <div class="mini-input">
+      <label for="from">From</label>
+      <input id="from" name="from" class="mini-input__real" placeholder="Type departure location" required />
+    </div>
 
-              <div class="mini-form__row">
-                <div class="mini-input">
-                  <label>Date</label>
-                  <div class="mini-input__box">Select date</div>
-                </div>
-                <div class="mini-input">
-                  <label>Passengers</label>
-                  <div class="mini-input__box">1 Passenger</div>
-                </div>
-              </div>
+    <div class="mini-input">
+      <label for="to">To</label>
+      <input id="to" name="to" class="mini-input__real" placeholder="Type destination" required />
+    </div>
+  </div>
 
-              <a class="btn btn--primary btn--full" href="https://busbooking-pulv.onrender.com/search" target="_blank" rel="noreferrer">
-                Search Buses
-              </a>
+  <div class="mini-form__row">
+    <div class="mini-input">
+      <label for="date">Date</label>
+      <input id="date" name="date" class="mini-input__real" type="date" required />
+    </div>
 
-              <div class="muted">
-                Booking opens in a new tab.
-              </div>
+    <div class="mini-input">
+      <label for="pax">Passengers</label>
+      <select id="pax" name="pax" class="mini-input__real">
+        <option value="1">1 Passenger</option>
+        <option value="2">2 Passengers</option>
+        <option value="3">3 Passengers</option>
+        <option value="4">4 Passengers</option>
+        <option value="5">5 Passengers</option>
+      </select>
+    </div>
+  </div>
+
+  <button class="btn btn--primary btn--full" type="submit">
+    Search Buses
+  </button>
+
+  <div class="muted">Booking opens in a new tab.</div>
+</form>
             </div>
           </div>
         </div>
