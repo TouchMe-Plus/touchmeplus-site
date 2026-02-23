@@ -1,0 +1,431 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2868
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 :root\{\
+  --bg: #F3F4F6;\
+  --surface: #FFFFFF;\
+  --surface-2: #F7F7F8;\
+\
+  --text: #111827;     /* dark navy/black */\
+  --muted: #6B7280;    /* grey text */\
+  --border: #E5E7EB;   /* light border */\
+\
+  --brand: #F4B400;    /* golden yellow */\
+  --brand-2: #FFD54A;  /* lighter golden */\
+  --shadow: 0 10px 30px rgba(17,24,39,0.10);\
+\
+  --radius: 16px;\
+  --radius-sm: 12px;\
+  --max: 1120px;\
+\}\
+\
+*\{ box-sizing: border-box; \}\
+html, body \{ height: 100%; \}\
+body\{\
+  margin:0;\
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\
+  color: var(--text);\
+  background: var(--bg);\
+\}\
+\
+a\{ color: inherit; text-decoration: none; \}\
+.container\{\
+  width: min(var(--max), calc(100% - 40px));\
+  margin: 0 auto;\
+\}\
+\
+.topbar\{\
+  background: rgba(244,180,0,0.10);\
+  border-bottom: 1px solid rgba(244,180,0,0.25);\
+  font-size: 14px;\
+\}\
+.topbar__inner\{\
+  display:flex; align-items:center; justify-content:space-between;\
+  padding: 10px 0;\
+  gap: 12px;\
+\}\
+.topbar__link\{\
+  font-weight: 600;\
+  text-decoration: underline;\
+  text-underline-offset: 3px;\
+\}\
+\
+/* Header */\
+.header\{\
+  position: sticky;\
+  top: 0;\
+  z-index: 50;\
+  background: rgba(243,244,246,0.86);\
+  backdrop-filter: blur(10px);\
+\}\
+.header__inner\{\
+  display:flex; align-items:center; justify-content:space-between;\
+  gap: 16px;\
+  padding: 18px 0;\
+\}\
+.header__accent\{\
+  height: 4px;\
+  background: var(--brand);\
+  box-shadow: 0 8px 20px rgba(244,180,0,0.25);\
+\}\
+\
+.brand\{\
+  display:flex; align-items:center; gap: 12px;\
+\}\
+.brand__logo\{\
+  width: 44px; height: 44px;\
+  border-radius: 12px;\
+  background: var(--surface);\
+  border: 1px solid var(--border);\
+  display:grid; place-items:center;\
+  box-shadow: 0 12px 24px rgba(17,24,39,0.06);\
+  font-weight: 800;\
+\}\
+.brand__logo span\{ letter-spacing: -0.02em; \}\
+.brand__logo--small\{\
+  width: 38px; height: 38px; border-radius: 12px;\
+\}\
+.brand__name\{\
+  font-size: 22px;\
+  font-weight: 800;\
+  letter-spacing: -0.02em;\
+\}\
+.brand__tagline\{\
+  font-size: 14px;\
+  color: var(--muted);\
+  margin-top: 2px;\
+\}\
+\
+/* Nav */\
+.nav\{\
+  display:flex;\
+  gap: 18px;\
+  color: var(--muted);\
+  font-weight: 600;\
+\}\
+.nav a\{ padding: 8px 10px; border-radius: 10px; \}\
+.nav a:hover\{ background: rgba(17,24,39,0.05); color: var(--text); \}\
+\
+.header__actions\{\
+  display:flex;\
+  align-items:center;\
+  gap: 10px;\
+\}\
+\
+.icon-btn\{\
+  width: 44px; height: 44px;\
+  border-radius: 14px;\
+  border: 1px solid var(--border);\
+  background: var(--surface);\
+  cursor: pointer;\
+  box-shadow: 0 12px 24px rgba(17,24,39,0.06);\
+  font-size: 18px;\
+\}\
+\
+/* Buttons */\
+.btn\{\
+  display:inline-flex;\
+  align-items:center;\
+  justify-content:center;\
+  gap: 10px;\
+  padding: 12px 16px;\
+  border-radius: 14px;\
+  border: 1px solid transparent;\
+  font-weight: 700;\
+  cursor: pointer;\
+  transition: transform .08s ease, box-shadow .2s ease, background .2s ease;\
+  user-select: none;\
+\}\
+.btn:active\{ transform: translateY(1px); \}\
+\
+.btn--primary\{\
+  background: var(--brand);\
+  color: #111827;\
+  box-shadow: 0 12px 24px rgba(244,180,0,0.25);\
+\}\
+.btn--primary:hover\{ background: var(--brand-2); \}\
+\
+.btn--ghost\{\
+  background: rgba(255,255,255,0.65);\
+  border-color: var(--border);\
+  color: var(--text);\
+\}\
+.btn--ghost:hover\{\
+  background: var(--surface);\
+  box-shadow: 0 12px 24px rgba(17,24,39,0.08);\
+\}\
+.btn--lg\{ padding: 14px 18px; border-radius: 16px; \}\
+.btn--full\{ width: 100%; \}\
+\
+/* Hero */\
+.hero\{\
+  padding: 42px 0 10px;\
+\}\
+.hero__inner\{\
+  display:grid;\
+  grid-template-columns: 1.15fr 0.85fr;\
+  gap: 28px;\
+  align-items: start;\
+\}\
+\
+.badge\{\
+  display:inline-flex;\
+  align-items:center;\
+  gap: 8px;\
+  padding: 10px 12px;\
+  border-radius: 999px;\
+  background: rgba(244,180,0,0.12);\
+  border: 1px solid rgba(244,180,0,0.25);\
+  font-weight: 700;\
+  font-size: 13px;\
+\}\
+\
+h1\{\
+  margin: 16px 0 10px;\
+  font-size: clamp(36px, 4vw, 54px);\
+  line-height: 1.02;\
+  letter-spacing: -0.03em;\
+\}\
+.hero__subtitle\{\
+  margin: 0 0 18px;\
+  color: var(--muted);\
+  font-size: 18px;\
+  line-height: 1.6;\
+  max-width: 55ch;\
+\}\
+\
+.hero__cta\{\
+  display:flex;\
+  gap: 12px;\
+  flex-wrap: wrap;\
+  margin-bottom: 18px;\
+\}\
+\
+.hero__stats\{\
+  display:flex;\
+  gap: 14px;\
+  flex-wrap: wrap;\
+\}\
+.stat\{\
+  background: rgba(255,255,255,0.65);\
+  border: 1px solid var(--border);\
+  border-radius: 16px;\
+  padding: 12px 14px;\
+  min-width: 180px;\
+\}\
+.stat__num\{\
+  font-weight: 800;\
+  letter-spacing: -0.02em;\
+\}\
+.stat__label\{\
+  margin-top: 4px;\
+  color: var(--muted);\
+  font-size: 13px;\
+\}\
+\
+/* Sections */\
+.section\{\
+  padding: 54px 0;\
+\}\
+.section--alt\{\
+  background: rgba(255,255,255,0.40);\
+  border-top: 1px solid rgba(17,24,39,0.06);\
+  border-bottom: 1px solid rgba(17,24,39,0.06);\
+\}\
+.section__head\{\
+  margin-bottom: 22px;\
+\}\
+.section__head h2\{\
+  margin: 0 0 8px;\
+  font-size: 30px;\
+  letter-spacing: -0.02em;\
+\}\
+.section__head p\{\
+  margin: 0;\
+  color: var(--muted);\
+  max-width: 70ch;\
+  line-height: 1.7;\
+\}\
+\
+/* Cards */\
+.card\{\
+  background: var(--surface);\
+  border: 1px solid var(--border);\
+  border-radius: var(--radius);\
+  padding: 18px;\
+\}\
+.card--shadow\{ box-shadow: var(--shadow); \}\
+.card__title\{\
+  margin: 0 0 8px;\
+  font-size: 18px;\
+  letter-spacing: -0.01em;\
+\}\
+.card__text\{ margin: 0 0 14px; color: var(--muted); line-height: 1.6; \}\
+\
+.icon\{\
+  width: 44px; height: 44px;\
+  border-radius: 14px;\
+  background: rgba(244,180,0,0.12);\
+  border: 1px solid rgba(244,180,0,0.25);\
+  display:grid; place-items:center;\
+  font-size: 20px;\
+  margin-bottom: 10px;\
+\}\
+\
+.grid\{\
+  display:grid;\
+  grid-template-columns: repeat(3, 1fr);\
+  gap: 16px;\
+\}\
+.grid--2\{\
+  grid-template-columns: repeat(2, 1fr);\
+\}\
+\
+/* Steps */\
+.steps\{\
+  display:grid;\
+  grid-template-columns: repeat(3, 1fr);\
+  gap: 16px;\
+  margin-top: 16px;\
+\}\
+.step\{\
+  background: var(--surface);\
+  border: 1px solid var(--border);\
+  border-radius: var(--radius);\
+  padding: 16px;\
+  display:flex;\
+  gap: 12px;\
+\}\
+.step__num\{\
+  width: 38px; height: 38px;\
+  border-radius: 14px;\
+  background: rgba(244,180,0,0.14);\
+  border: 1px solid rgba(244,180,0,0.28);\
+  display:grid; place-items:center;\
+  font-weight: 900;\
+\}\
+.step__body h3\{ margin: 0 0 6px; letter-spacing: -0.01em; \}\
+.step__body p\{ margin: 0; color: var(--muted); line-height: 1.6; \}\
+\
+.center\{ margin-top: 22px; display:flex; justify-content:center; \}\
+\
+/* Mini form (visual only) */\
+.mini-form\{ margin-top: 12px; display:grid; gap: 12px; \}\
+.mini-form__row\{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; \}\
+\
+.mini-input label\{\
+  display:block;\
+  font-weight: 700;\
+  font-size: 13px;\
+  margin-bottom: 6px;\
+  color: var(--text);\
+\}\
+.mini-input__box\{\
+  padding: 14px 14px;\
+  border-radius: 14px;\
+  border: 1px solid var(--border);\
+  background: var(--surface-2);\
+  color: #9CA3AF;\
+  font-weight: 600;\
+\}\
+\
+/* Lists */\
+.list\{ margin: 12px 0 0; padding-left: 18px; color: var(--muted); line-height: 1.7; \}\
+.pill-row\{ display:flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; \}\
+.pill\{\
+  padding: 8px 10px;\
+  border-radius: 999px;\
+  border: 1px solid var(--border);\
+  background: rgba(255,255,255,0.65);\
+  font-size: 13px;\
+  font-weight: 700;\
+  color: var(--text);\
+\}\
+\
+.muted\{ color: var(--muted); font-size: 13px; \}\
+\
+/* Contact */\
+.contact\{\
+  display:grid;\
+  grid-template-columns: 1.1fr 0.9fr;\
+  gap: 16px;\
+  align-items: start;\
+\}\
+.contact__rows\{ margin-top: 14px; display:grid; gap: 10px; \}\
+.contact__row\{\
+  display:flex; justify-content: space-between; gap: 10px;\
+  padding: 12px 12px;\
+  border-radius: 14px;\
+  border: 1px solid var(--border);\
+  background: rgba(255,255,255,0.65);\
+\}\
+.contact__label\{ color: var(--muted); font-weight: 700; \}\
+.contact__value\{ font-weight: 800; letter-spacing: -0.01em; \}\
+\
+.contact__cta\{ margin-top: 14px; display:flex; gap: 10px; flex-wrap: wrap; \}\
+.accent-line\{\
+  height: 4px;\
+  width: 100%;\
+  border-radius: 999px;\
+  background: var(--brand);\
+  margin: 14px 0 10px;\
+\}\
+\
+/* Footer */\
+.footer\{\
+  background: #0B1220;\
+  color: #E5E7EB;\
+  padding: 26px 0;\
+\}\
+.footer__inner\{\
+  display:grid;\
+  grid-template-columns: 1fr auto auto;\
+  gap: 16px;\
+  align-items: center;\
+\}\
+.footer__name\{ font-weight: 900; letter-spacing: -0.01em; \}\
+.footer__tagline\{ color: rgba(229,231,235,0.75); font-size: 13px; margin-top: 4px; \}\
+.footer__links\{\
+  display:flex; gap: 14px; flex-wrap: wrap;\
+  color: rgba(229,231,235,0.85);\
+  font-weight: 700;\
+\}\
+.footer__links a:hover\{ text-decoration: underline; text-underline-offset: 3px; \}\
+.footer__copy\{ color: rgba(229,231,235,0.65); font-size: 13px; \}\
+\
+/* Responsive */\
+@media (max-width: 980px)\{\
+  .hero__inner\{ grid-template-columns: 1fr; \}\
+  .grid\{ grid-template-columns: 1fr; \}\
+  .grid--2\{ grid-template-columns: 1fr; \}\
+  .steps\{ grid-template-columns: 1fr; \}\
+  .contact\{ grid-template-columns: 1fr; \}\
+  .nav\{ display:none; \}\
+\}\
+@media (max-width: 520px)\{\
+  .mini-form__row\{ grid-template-columns: 1fr; \}\
+  .footer__inner\{ grid-template-columns: 1fr; \}\
+\}\
+\
+/* Dark mode (toggle adds data-theme="dark" on html) */\
+html[data-theme="dark"]\{\
+  --bg: #0B1220;\
+  --surface: #0F172A;\
+  --surface-2: #111C33;\
+\
+  --text: #E5E7EB;\
+  --muted: #9CA3AF;\
+  --border: rgba(229,231,235,0.12);\
+\
+  --shadow: 0 10px 30px rgba(0,0,0,0.45);\
+\}\
+html[data-theme="dark"] .header\{\
+  background: rgba(11,18,32,0.70);\
+\}\
+html[data-theme="dark"] .topbar\{\
+  background: rgba(244,180,0,0.10);\
+\}}

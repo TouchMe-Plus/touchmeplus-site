@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TouchMe+ | Smart Bus Booking</title>
+  <meta name="description" content="TouchMe+ is a smart platform for booking private long-distance buses across Sri Lanka. Room booking coming soon." />
+  <meta name="theme-color" content="#F4B400" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Inter is a very close match to your screenshot style -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Top announcement (optional) -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>🚍 TouchMe+ is live for bus search & booking</span>
+      <a class="topbar__link" href="https://busbooking-pulv.onrender.com/search" target="_blank" rel="noreferrer">Open booking ↗</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#home" aria-label="TouchMe+ home">
+        <div class="brand__logo">
+            <img src="assets/logo.png" alt="TouchMe+ logo" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+        </div>
+        <div class="brand__text">
+          <div class="brand__name">TouchMe+</div>
+          <div class="brand__tagline">Smart Bus Booking</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#how">How it works</a>
+        <a href="#operators">Operators</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+          🌙
+        </button>
+        <a class="btn btn--primary" href="https://busbooking-pulv.onrender.com/search" target="_blank" rel="noreferrer">
+          Book Now
+        </a>
+      </div>
+    </div>
+
+    <div class="header__accent" aria-hidden="true"></div>
+  </header>
+
+  <!-- Main -->
+  <main id="home">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__left">
+          <div class="badge">Sri Lanka • City-to-city • Private operators</div>
+          <h1>Find Your Perfect Journey</h1>
+          <p class="hero__subtitle">
+            Safe, comfortable, and affordable long-distance bus travel across Sri Lanka — with room booking coming soon.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary btn--lg" href="https://busbooking-pulv.onrender.com/search" target="_blank" rel="noreferrer">
+              Search Buses
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#services">
+              Explore Services
+            </a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="stat">
+              <div class="stat__num">Fast</div>
+              <div class="stat__label">Search & book in minutes</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">Trusted</div>
+              <div class="stat__label">Verified operators (phase-wise)</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">Simple</div>
+              <div class="stat__label">Clear pricing & routes</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__right">
+          <div class="card card--shadow">
+            <h2 class="card__title">Quick Redirect</h2>
+            <p class="card__text">Use this landing page to introduce TouchMe+ and send users to the booking platform.</p>
+
+            <div class="mini-form">
+              <div class="mini-form__row">
+                <div class="mini-input">
+                  <label>From</label>
+                  <div class="mini-input__box">Type departure location</div>
+                </div>
+                <div class="mini-input">
+                  <label>To</label>
+                  <div class="mini-input__box">Type destination</div>
+                </div>
+              </div>
+
+              <div class="mini-form__row">
+                <div class="mini-input">
+                  <label>Date</label>
+                  <div class="mini-input__box">Select date</div>
+                </div>
+                <div class="mini-input">
+                  <label>Passengers</label>
+                  <div class="mini-input__box">1 Passenger</div>
+                </div>
+              </div>
+
+              <a class="btn btn--primary btn--full" href="https://busbooking-pulv.onrender.com/search" target="_blank" rel="noreferrer">
+                Search Buses
+              </a>
+
+              <div class="muted">
+                Booking opens in a new tab.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section__head">
+          <h2>What TouchMe+ offers</h2>
+          <p>Built for private long-distance operators — similar purpose to SLTB style booking, but for private services.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="icon">🚌</div>
+            <h3>Private Bus Booking</h3>
+            <p>Search routes, compare options, and book long journeys across Sri Lanka with ease.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🏨</div>
+            <h3>Room Booking (Coming Soon)</h3>
+            <p>Plan your journey end-to-end — reserve rooms near your destination and travel stress-free.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">📲</div>
+            <h3>Mobile-first Experience</h3>
+            <p>Designed to feel like a modern app: clean UI, quick actions, and smooth navigation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section section--alt" id="how">
+      <div class="container">
+        <div class="section__head">
+          <h2>How it works</h2>
+          <p>Simple steps — your landing site explains this, then redirects users to booking.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step__num">1</div>
+            <div class="step__body">
+              <h3>Search your route</h3>
+              <p>Enter From / To, date, and passengers to see available buses.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step__num">2</div>
+            <div class="step__body">
+              <h3>Choose your bus</h3>
+              <p>Compare timings and options from private operators.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step__num">3</div>
+            <div class="step__body">
+              <h3>Confirm & travel</h3>
+              <p>Complete booking on the TouchMe+ booking platform.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="center">
+          <a class="btn btn--primary btn--lg" href="https://busbooking-pulv.onrender.com/search" target="_blank" rel="noreferrer">
+            Go to Booking
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Operators -->
+    <section class="section" id="operators">
+      <div class="container">
+        <div class="section__head">
+          <h2>For Bus Operators</h2>
+          <p>If you run private long-distance services, TouchMe+ can help you reach more customers.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="card">
+            <h3>Operator onboarding</h3>
+            <p>We can verify services phase-by-phase and list routes with clear schedules and pricing.</p>
+            <ul class="list">
+              <li>Route & schedule listing</li>
+              <li>Seat/availability management (future)</li>
+              <li>Support Sinhala / Tamil / English (future)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Business email / WhatsApp</h3>
+            <p>Use the contact section below for partnership requests until the operator dashboard launches.</p>
+            <div class="pill-row">
+              <span class="pill">Low commission (planned)</span>
+              <span class="pill">Fast support</span>
+              <span class="pill">Brand-first UI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <h2>Contact</h2>
+          <p>Put your real contact details here. For now, you can keep placeholders.</p>
+        </div>
+
+        <div class="contact">
+          <div class="card">
+            <h3>Get in touch</h3>
+            <p class="muted">Replace these with your real email/WhatsApp/social links.</p>
+
+            <div class="contact__rows">
+              <div class="contact__row">
+                <span class="contact__label">Email</span>
+                <span class="contact__value">hello@touchmeplus.com</span>
+              </div>
+              <div class="contact__row">
+                <span class="contact__label">WhatsApp</span>
+                <span class="contact__value">+94 XX XXX XXXX</span>
+              </div>
+              <div class="contact__row">
+                <span class="contact__label">Instagram</span>
+                <span class="contact__value">@touchmeplus</span>
+              </div>
+            </div>
+
+            <div class="contact__cta">
+              <a class="btn btn--primary" href="https://busbooking-pulv.onrender.com/search" target="_blank" rel="noreferrer">
+                Book Now
+              </a>
+              <a class="btn btn--ghost" href="#home">Back to top</a>
+            </div>
+          </div>
+
+          <div class="card card--shadow">
+            <h3>Quick note</h3>
+            <p>
+              This website is an introduction page only. The booking experience runs on the booking link.
+              Later, we can move to a full system under touchmeplus.com (same brand).
+            </p>
+            <div class="accent-line" aria-hidden="true"></div>
+            <p class="muted">
+              Tip: You can add Terms, Privacy, and FAQs anytime.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="brand__logo brand__logo--small" aria-hidden="true"><span>TM+</span></div>
+        <div>
+          <div class="footer__name">TouchMe+</div>
+          <div class="footer__tagline">Smart Bus Booking • Sri Lanka</div>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <a href="#services">Services</a>
+        <a href="#how">How it works</a>
+        <a href="#contact">Contact</a>
+        <a href="https://busbooking-pulv.onrender.com/search" target="_blank" rel="noreferrer">Booking ↗</a>
+      </div>
+
+      <div class="footer__copy">
+        © <span id="year"></span> TouchMe+. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
