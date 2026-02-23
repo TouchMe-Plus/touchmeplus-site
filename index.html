@@ -1,22 +1,22 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TouchMe+ | Smart Bus Booking</title>
+  <title>TouchMe+</title>
   <meta name="description" content="TouchMe+ is a smart platform for booking private long-distance buses across Sri Lanka. Room booking coming soon." />
   <meta name="theme-color" content="#F4B400" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Inter is a very close match to your screenshot style -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Top announcement (optional) -->
+  <!-- Top announcement -->
   <div class="topbar">
     <div class="container topbar__inner">
       <span>🚍 TouchMe+ is live for bus search & booking</span>
@@ -28,8 +28,9 @@
   <header class="header">
     <div class="container header__inner">
       <a class="brand" href="#home" aria-label="TouchMe+ home">
-        <div class="brand__logo">
-            <img src="assets/logo.png" alt="TouchMe+ logo" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+        <div class="brand__logo" aria-hidden="true">
+          <!-- If you have a logo: replace with <img src="assets/logo.png" alt="TouchMe+ logo" /> -->
+          <span>TM+</span>
         </div>
         <div class="brand__text">
           <div class="brand__name">TouchMe+</div>
@@ -57,7 +58,6 @@
     <div class="header__accent" aria-hidden="true"></div>
   </header>
 
-  <!-- Main -->
   <main id="home">
     <!-- Hero -->
     <section class="hero">
@@ -94,48 +94,35 @@
           </div>
         </div>
 
+        <!-- Poster instead of form -->
         <div class="hero__right">
-          <div class="card card--shadow">
-            <h2 class="card__title">Quick Redirect</h2>
-            <p class="card__text">Use this landing page to introduce TouchMe+ and send users to the booking platform.</p>
+          <div class="poster-card card card--shadow">
+            <div class="poster-badge">Now Live in Sri Lanka</div>
 
-            <form class="mini-form" id="redirectForm">
-  <div class="mini-form__row">
-    <div class="mini-input">
-      <label for="from">From</label>
-      <input id="from" name="from" class="mini-input__real" placeholder="Type departure location" required />
-    </div>
+            <h2>Book Private Buses Across Sri Lanka</h2>
 
-    <div class="mini-input">
-      <label for="to">To</label>
-      <input id="to" name="to" class="mini-input__real" placeholder="Type destination" required />
-    </div>
-  </div>
+            <p>
+              Travel city-to-city with trusted private operators.
+              Safe, comfortable and affordable long-distance journeys.
+            </p>
 
-  <div class="mini-form__row">
-    <div class="mini-input">
-      <label for="date">Date</label>
-      <input id="date" name="date" class="mini-input__real" type="date" required />
-    </div>
+            <div class="poster-routes">
+              <span>Colombo</span>
+              <span>Kandy</span>
+              <span>Jaffna</span>
+              <span>Batticaloa</span>
+              <span>Galle</span>
+            </div>
 
-    <div class="mini-input">
-      <label for="pax">Passengers</label>
-      <select id="pax" name="pax" class="mini-input__real">
-        <option value="1">1 Passenger</option>
-        <option value="2">2 Passengers</option>
-        <option value="3">3 Passengers</option>
-        <option value="4">4 Passengers</option>
-        <option value="5">5 Passengers</option>
-      </select>
-    </div>
-  </div>
+            <a class="btn btn--primary btn--lg btn--full"
+               href="https://busbooking-pulv.onrender.com/search"
+               target="_blank"
+               rel="noopener noreferrer">
+              🚍 Book Buses Now
+            </a>
 
-  <button class="btn btn--primary btn--full" type="submit">
-    Search Buses
-  </button>
-
-  <div class="muted">Booking opens in a new tab.</div>
-</form>
+            <div class="muted" style="text-align:center; margin-top:10px;">
+              Opens booking platform in a new tab
             </div>
           </div>
         </div>
@@ -251,7 +238,7 @@
       <div class="container">
         <div class="section__head">
           <h2>Contact</h2>
-          <p>Put your real contact details here. For now, you can keep placeholders.</p>
+          <p>Replace placeholders with your real email/WhatsApp/social links.</p>
         </div>
 
         <div class="contact">
@@ -296,7 +283,6 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- Footer -->
