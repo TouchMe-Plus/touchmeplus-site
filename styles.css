@@ -220,6 +220,26 @@ h1{
   font-size: 13px;
 }
 
+.mini-input__real{
+  width: 100%;
+  padding: 14px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-weight: 600;
+  outline: none;
+}
+
+.mini-input__real::placeholder{
+  color: #9CA3AF;
+}
+
+.mini-input__real:focus{
+  border-color: rgba(244,180,0,0.55);
+  box-shadow: 0 0 0 4px rgba(244,180,0,0.15);
+}
+
 /* Sections */
 .section{
   padding: 54px 0;
