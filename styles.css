@@ -473,3 +473,46 @@ html[data-theme="dark"] .header{
 html[data-theme="dark"] .topbar{
   background: rgba(244,180,0,0.10);
 }
+/* Contact Buttons */
+.contact__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* Base button */
+.contact__btn {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Email */
+.contact__btn.email {
+  background: #f1f3f5;
+  color: #111;
+}
+
+/* WhatsApp */
+.contact__btn.whatsapp {
+  background: #25D366;
+  color: #fff;
+}
+
+/* Instagram */
+.contact__btn.instagram {
+  background: #E1306C;
+  color: #fff;
+}
+
+/* Hover */
+.contact__btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
