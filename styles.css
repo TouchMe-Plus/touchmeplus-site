@@ -698,7 +698,17 @@ html[data-theme="dark"] .topbar{
   color: #222222;
   margin: 0;
 }
+/* Room Booking button color */
+.btn--room {
+  background-color: #F4B400;
+  color: #000;
+  border: none;
+}
 
+/* Optional hover effect */
+.btn--room:hover {
+  background-color: #e0a800; /* slightly darker */
+}
 @media (max-width: 900px) {
   .offers-grid {
     grid-template-columns: 1fr;
