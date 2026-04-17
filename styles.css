@@ -238,6 +238,11 @@ h1{
   border-top: 1px solid rgba(17,24,39,0.06);
   border-bottom: 1px solid rgba(17,24,39,0.06);
 }
+html[data-theme="dark"] .section--alt{
+  background: #0B1220 !important;
+  border-top: 1px solid rgba(229,231,235,0.08);
+  border-bottom: 1px solid rgba(229,231,235,0.08);
+}
 .section__head{
   margin-bottom: 22px;
 }
@@ -824,4 +829,32 @@ html[data-theme="dark"] #services.section--alt {
 }
 html[data-theme="dark"] section#services {
   background-color: #0B1220 !important;
+}
+/* ===== FORCE LIGHT SECTIONS TO DARK IN DARK MODE ===== */
+
+html[data-theme="dark"] body,
+html[data-theme="dark"] main,
+html[data-theme="dark"] section,
+html[data-theme="dark"] .section,
+html[data-theme="dark"] .section--alt,
+html[data-theme="dark"] #services,
+html[data-theme="dark"] #how,
+html[data-theme="dark"] #operators,
+html[data-theme="dark"] #contact {
+  background: #0B1220 !important;
+  background-color: #0B1220 !important;
+  background-image: none !important;
+}
+
+/* keep cards/boxes unchanged */
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .stat,
+html[data-theme="dark"] .step,
+html[data-theme="dark"] .contact__row,
+html[data-theme="dark"] .poster-card,
+html[data-theme="dark"] .pill,
+html[data-theme="dark"] .poster-routes span,
+html[data-theme="dark"] .contact__btn,
+html[data-theme="dark"] .btn {
+  background-image: initial !important;
 }
