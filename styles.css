@@ -814,3 +814,7 @@ html[data-theme="dark"] body {
 html[data-theme="dark"] .hero {
   background: #0B1220 !important;
 }
+html[data-theme="dark"] .section,
+html[data-theme="dark"] .section--alt {
+  background: #0B1220 !important;
+}
