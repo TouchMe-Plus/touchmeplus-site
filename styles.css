@@ -818,3 +818,7 @@ html[data-theme="dark"] .section,
 html[data-theme="dark"] .section--alt {
   background: #0B1220 !important;
 }
+/* FIX ONLY LIGHT SECTION IN DARK MODE */
+html[data-theme="dark"] #services {
+  background: #0B1220 !important;
+}
