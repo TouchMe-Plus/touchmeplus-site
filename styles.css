@@ -805,3 +805,8 @@ html[data-theme="dark"] .stat__num,
 html[data-theme="dark"] .stat__label{
   color: #0B1220 !important;
 }
+/* FORCE FULL DARK BACKGROUND */
+html[data-theme="dark"],
+html[data-theme="dark"] body {
+  background: #0B1220 !important;
+}
