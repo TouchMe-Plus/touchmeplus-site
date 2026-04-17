@@ -810,3 +810,7 @@ html[data-theme="dark"],
 html[data-theme="dark"] body {
   background: #0B1220 !important;
 }
+/* REMOVE GRADIENT IN DARK MODE */
+html[data-theme="dark"] .hero {
+  background: #0B1220 !important;
+}
