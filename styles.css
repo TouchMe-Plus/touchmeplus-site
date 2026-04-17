@@ -912,3 +912,6 @@ html[data-theme="dark"] .offers-grid .offer-box {
 html[data-theme="dark"] #services h2 {
   color: #E5E7EB !important;
 }
+html[data-theme="dark"] h2 {
+  color: #E5E7EB !important;
+}
