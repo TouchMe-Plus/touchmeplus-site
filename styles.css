@@ -886,3 +886,25 @@ html[data-theme="dark"] .section h2,
 html[data-theme="dark"] .section__title {
   color: #E5E7EB !important;
 }
+/* ===== DARK MODE FIX FOR OFFERS AREA ===== */
+html[data-theme="dark"] .offers-grid .offer-box {
+  background: #0F172A !important;
+  color: #E5E7EB !important;
+}
+
+html[data-theme="dark"] .offers-grid .offer-box h3 {
+  color: #E5E7EB !important;
+}
+
+html[data-theme="dark"] .offers-grid .offer-box p {
+  color: #8AA3A2 !important;
+}
+
+/* section title like "What TouchMe+ offers" */
+html[data-theme="dark"] #services h2,
+html[data-theme="dark"] #services .section__head h2 {
+  color: #E5E7EB !important;
+}
+html[data-theme="dark"] .offers-grid .offer-box {
+  border-color: #F4B400 !important;
+}
