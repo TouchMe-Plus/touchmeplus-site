@@ -858,3 +858,31 @@ html[data-theme="dark"] .contact__btn,
 html[data-theme="dark"] .btn {
   background-image: initial !important;
 }
+/* ===== DARK MODE CARD + TEXT FIX ===== */
+
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .offer-card,
+html[data-theme="dark"] .feature-card {
+  background: #0F172A !important;   /* card background */
+  color: #E5E7EB !important;
+}
+
+/* Card headings */
+html[data-theme="dark"] .card h3,
+html[data-theme="dark"] .offer-card h3,
+html[data-theme="dark"] .feature-card h3 {
+  color: #E5E7EB !important;  /* heading color */
+}
+
+/* Card sub text */
+html[data-theme="dark"] .card p,
+html[data-theme="dark"] .offer-card p,
+html[data-theme="dark"] .feature-card p {
+  color: #8AA3A2 !important;  /* sub text */
+}
+
+/* Section title (What TouchMe+ offers) */
+html[data-theme="dark"] .section h2,
+html[data-theme="dark"] .section__title {
+  color: #E5E7EB !important;
+}
