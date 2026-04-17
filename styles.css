@@ -798,3 +798,6 @@ body.dark-mode .feature-box p {
     grid-template-columns: 1fr;
   }
 }
+.feature-box * {
+    color: #0B1220 !important;
+}
