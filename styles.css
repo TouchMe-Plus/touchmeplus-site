@@ -796,3 +796,12 @@ body.dark .stat__label {
 body.dark .hero__stats * {
   color: #ffffff !important;
 }
+html[data-theme="dark"] .stat{
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+html[data-theme="dark"] .stat__num,
+html[data-theme="dark"] .stat__label{
+  color: #0B1220 !important;
+}
