@@ -930,3 +930,6 @@ html[data-theme="dark"] .hero__features .feature strong {
 html[data-theme="dark"] .hero__features .feature p {
   color: #ABAEB5 !important;
 }
+html[data-theme="dark"] .hero__features * {
+  color: #ABAEB5 !important;
+}
