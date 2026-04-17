@@ -908,3 +908,7 @@ html[data-theme="dark"] #services .section__head h2 {
 html[data-theme="dark"] .offers-grid .offer-box {
   border-color: #F4B400 !important;
 }
+/* ===== FIX "What TouchMe+ offers" heading in dark mode ===== */
+html[data-theme="dark"] #services h2 {
+  color: #E5E7EB !important;
+}
