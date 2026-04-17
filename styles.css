@@ -933,4 +933,7 @@ html[data-theme="dark"] .hero__features .feature p {
 html[data-theme="dark"] .hero__features * {
   color: #ABAEB5 !important;
 }
-
+html[data-theme="dark"] .hero__stats .stat {
+  background: #ABAEB5 !important;
+  border: none !important;
+}
