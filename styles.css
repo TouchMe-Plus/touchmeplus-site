@@ -791,8 +791,8 @@ html[data-theme="dark"] .topbar{
 body.dark .stat,
 body.dark .stat__num,
 body.dark .stat__label {
-  color: #0B1220 !important;
+  color: #ffffff !important;
 }
 body.dark .hero__stats * {
-  color: #0B1220 !important;
+  color: #ffffff !important;
 }
