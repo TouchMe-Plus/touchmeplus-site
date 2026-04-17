@@ -822,3 +822,6 @@ html[data-theme="dark"] #services.section,
 html[data-theme="dark"] #services.section--alt {
   background: #0B1220 !important;
 }
+html[data-theme="dark"] section#services {
+  background-color: #0B1220 !important;
+}
