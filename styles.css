@@ -787,17 +787,9 @@ html[data-theme="dark"] .topbar{
 .pricing-points li {
   margin-bottom: 4px;
 }
-/* Dark theme text color fix */
-body.dark-mode .feature-box,
-body.dark-mode .feature-box h3,
-body.dark-mode .feature-box p {
-    color: #0B1220 !important;
-}
-@media (max-width: 820px) {
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.feature-box * {
-    color: #0B1220 !important;
+/* DARK MODE FIX - stat boxes text */
+body.dark .stat,
+body.dark .stat__num,
+body.dark .stat__label {
+  color: #0B1220 !important;
 }
