@@ -933,3 +933,16 @@ html[data-theme="dark"] .hero__features .feature p {
 html[data-theme="dark"] .hero__features * {
   color: #ABAEB5 !important;
 }
+/* ===== DARK MODE FIX - hero stats (Travel / Stay / Simple) ===== */
+
+html[data-theme="dark"] .hero__stats .stat {
+  color: #ABAEB5 !important;
+}
+
+html[data-theme="dark"] .hero__stats .stat__num {
+  color: #ABAEB5 !important;
+}
+
+html[data-theme="dark"] .hero__stats .stat__label {
+  color: #ABAEB5 !important;
+}
