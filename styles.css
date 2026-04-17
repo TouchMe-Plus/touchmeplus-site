@@ -915,3 +915,18 @@ html[data-theme="dark"] #services h2 {
 html[data-theme="dark"] h2 {
   color: #E5E7EB !important;
 }
+/* ===== DARK MODE FIX - Travel / Stay / Simple cards ===== */
+html[data-theme="dark"] .hero__features .feature {
+  color: #ABAEB5 !important;
+}
+
+/* heading inside (Travel / Stay / Simple) */
+html[data-theme="dark"] .hero__features .feature h4,
+html[data-theme="dark"] .hero__features .feature strong {
+  color: #ABAEB5 !important;
+}
+
+/* paragraph text */
+html[data-theme="dark"] .hero__features .feature p {
+  color: #ABAEB5 !important;
+}
