@@ -942,7 +942,7 @@ html[data-theme="dark"] .hero__stats .stat {
   height: 160px;         /* bigger */
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #F4B400;
+  border: 5px solid #ffffff;
   margin-bottom: 12px;
 
   image-rendering: auto; /* ensure clarity */
