@@ -961,7 +961,7 @@ html[data-theme="dark"] .hero__stats .stat {
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
-  border: 5px solid #F4B400;
+  border: 5px solid #22DDE8;
   margin-bottom: 14px;
   display: block;
 }
