@@ -8,6 +8,49 @@
   <link rel="icon" href="favicon.ico" />
   <link rel="apple-touch-icon" href="favicon.ico" />
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .coming-soon-actions {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin-top: 28px;
+      width: 100%;
+    }
+
+    .coming-soon-actions .btn {
+      flex: 1;
+      min-width: 0;
+      text-align: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 600px) {
+      .coming-soon-actions {
+        gap: 10px;
+      }
+
+      .coming-soon-actions .btn {
+        padding: 14px 10px;
+        font-size: 15px;
+        border-radius: 16px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .coming-soon-actions {
+        gap: 8px;
+      }
+
+      .coming-soon-actions .btn {
+        padding: 13px 8px;
+        font-size: 13px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -62,11 +105,11 @@
           
           <div class="coming-soon-actions">
             <a class="btn btn--primary btn--lg" href="index.html">
-              Back to Home
+              Home
             </a>
 
             <a class="btn btn--primary btn--lg" href="https://mseat.touchmeplus.com/search">
-              Click Here For Bus Booking
+              Book Bus Seats
             </a>
           </div>
 
