@@ -380,147 +380,119 @@
      MEET OUR TEAM
 ========================== -->
 
-<section class="section team-section" id="team">
-
-    <div class="container">
-
-        <div class="section__head">
-            <h2>Meet Our Team</h2>
-            <p>The people behind TouchMe+</p>
-        </div>
-
-        <div class="team-showcase">
-
-            <div class="gold-border"></div>
-
-            <div class="team-content">
-
-                <div class="team-image-wrapper">
-                    <img
-                        id="teamImage"
-                        src="assets/images/3.png"
-                        alt="Team Member"
-                        class="team-photo">
-                </div>
-
-                <div class="team-info">
-
-                    <h3 id="teamName">
-                        Aasir
-                    </h3>
-
-                    <p id="teamRole">
-                        CEO
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
+<section class="section" id="team">
+  <div class="container">
+    <div class="section__head">
+      <h2>Meet Our Team</h2>
+      <p>The people behind TouchMe+</p>
     </div>
 
+    <svg width="0" height="0" style="position:absolute">
+      <defs>
+        <filter id="electricGlow" x="-40%" y="-40%" width="180%" height="180%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.02 0.05" numOctaves="2" seed="7" result="noise">
+            <animate attributeName="seed" values="7;24;7" dur="8s" repeatCount="indefinite"/>
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.6" xChannelSelector="R" yChannelSelector="G" result="jittered"/>
+          <feGaussianBlur in="jittered" stdDeviation="1.1"/>
+        </filter>
+        <filter id="electricJitter" x="-20%" y="-20%" width="140%" height="140%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.025 0.06" numOctaves="2" seed="13" result="noise2">
+            <animate attributeName="seed" values="13;31;13" dur="7s" repeatCount="indefinite"/>
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" in2="noise2" scale="1.2" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="team-viewport">
+      <div class="team-track" id="teamTrack"></div>
+    </div>
+  </div>
+</section>
+
+<script src="assets/js/team-carousel.js"></script>
 </section>
 
 <script>
 
-const teamMembers = [
+(function(){
+  var team = [
+    { img: "assets/images/3.png",  name: "Aasir",  role: "CEO" },
+    { img: "assets/images/2.png",  name: "Hafil",  role: "Application Support & Maintenance" },
+    { img: "assets/images/1.png",  name: "Imadh",  role: "Overall Supervisor" },
+    { img: "assets/images/4.png",  name: "Ayman",  role: "Marketing Manager" },
+    { img: "assets/images/5.png",  name: "Wajith", role: "Web Development" },
+    { img: "assets/images/6.png",  name: "Akeeb",  role: "External Communications & Partnerships" },
+    { img: "assets/images/7.png",  name: "Jaasim", role: "Administrator" },
+    { img: "assets/images/10.png", name: "Arshad", role: "Head of Room Booking Operations" },
+    { img: "assets/images/10.png", name: "Arshad", role: "Head of Bus Booking Operations" }
+  ];
 
-{
-name:"Aasir",
-role:"CEO",
-image:"assets/images/3.png"
-},
+  var REPEATS = 3;
+  var track = document.getElementById("teamTrack");
+  if(!track) return;
 
-{
-name:"Hafil",
-role:"Application Support & Maintenance",
-image:"assets/images/2.png"
-},
+  var cardSvg =
+    '<svg class="e-card__fx" viewBox="0 0 190 240" preserveAspectRatio="none">' +
+      '<rect class="e-card__glow" x="3" y="3" width="184" height="234" rx="18" ry="18"></rect>' +
+      '<rect class="e-card__stroke" x="3" y="3" width="184" height="234" rx="18" ry="18"></rect>' +
+      '<rect class="e-card__highlight" x="3" y="3" width="184" height="234" rx="18" ry="18"></rect>' +
+    '</svg>';
 
-{
-name:"Imadh",
-role:"Overall Supervisor",
-image:"assets/images/1.png"
-},
+  var wraps = [];
+  for(var r=0; r<REPEATS; r++){
+    for(var i=0; i<team.length; i++){
+      var m = team[i];
+      var wrap = document.createElement("div");
+      wrap.className = "team-card-wrap";
+      wrap.innerHTML =
+        '<div class="e-card">' + cardSvg + '<div class="e-card__mask"><img src="' + m.img + '" alt="' + m.name + '"></div></div>' +
+        '<h4 class="team-name">' + m.name + '</h4>' +
+        '<p class="team-role">' + m.role + '</p>';
+      track.appendChild(wrap);
+      wraps.push(wrap);
+    }
+  }
 
-{
-name:"Ayman",
-role:"Marketing Manager",
-image:"assets/images/4.png"
-},
+  function cardStep(){
+    var w = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--card-w'));
+    var g = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gap'));
+    return w + g;
+  }
 
-{
-name:"Wajith",
-role:"Web Development",
-image:"assets/images/5.png"
-},
+  var currentIndex = team.length;
 
-{
-name:"Akeeb",
-role:"External Communications & Partnerships",
-image:"assets/images/6.png"
-},
+  function render(withTransition){
+    track.style.transition = withTransition ? '' : 'none';
+    track.style.transform = 'translateX(' + (-(currentIndex - 2) * cardStep()) + 'px)';
+    wraps.forEach(function(w, i){
+      var diff = i - currentIndex;
+      w.classList.remove('pos-active','pos-adjacent');
+      if(diff === 0) w.classList.add('pos-active');
+      else if(Math.abs(diff) === 1) w.classList.add('pos-adjacent');
+    });
+    if(!withTransition){
+      void track.offsetWidth;
+      track.style.transition = '';
+    }
+  }
 
-{
-name:"Jaasim",
-role:"Administrator",
-image:"assets/images/7.png"
-},
+  render(false);
 
-{
-name:"Arshad",
-role:"Head of Room Booking Operations",
-image:"assets/images/10.png"
-},
+  function tick(){
+    currentIndex++;
+    render(true);
+    setTimeout(function(){
+      if(currentIndex >= team.length * 2){
+        currentIndex -= team.length;
+        render(false);
+      }
+    }, 720);
+  }
 
-{
-name:"Arshad",
-role:"Head of Bus Booking Operations",
-image:"assets/images/10.png"
-}
-
-];
-
-let currentMember = 0;
-
-const image = document.getElementById("teamImage");
-const name = document.getElementById("teamName");
-const role = document.getElementById("teamRole");
-
-function changeMember(){
-
-image.style.opacity="0";
-name.style.opacity="0";
-role.style.opacity="0";
-
-setTimeout(()=>{
-
-currentMember++;
-
-if(currentMember>=teamMembers.length){
-
-currentMember=0;
-
-}
-
-image.src=teamMembers[currentMember].image;
-
-name.textContent=teamMembers[currentMember].name;
-
-role.textContent=teamMembers[currentMember].role;
-
-image.style.opacity="1";
-name.style.opacity="1";
-role.style.opacity="1";
-
-},500);
-
-}
-
-setInterval(changeMember,4000);
-
+  setInterval(tick, 4000);
+})();
 </script>
     
   <!-- Footer -->
