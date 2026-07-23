@@ -1016,5 +1016,15 @@ html[data-theme="dark"] .team-role{ color:#8AA3A2; }
 }
 /* mobile */
 @media (max-width: 600px){
-  .team-viewport{ --card-w:120px; --card-h:155px; --gap:1px; --card-radius:16px; width: calc(3 * var(--card-w) + 2 * var(--gap)); }
+  .team-viewport{
+    --card-w: 104px;
+    --card-h: 135px;
+    --gap: 12px;
+    --card-radius: 14px;
+    width: 100%;
+    padding: 24px 0 10px;
+  }
+  .team-card-wrap.pos-active{
+    transform: scale(1.0); 
+  }
 }
