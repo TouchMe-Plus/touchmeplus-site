@@ -1016,5 +1016,5 @@ html[data-theme="dark"] .team-role{ color:#8AA3A2; }
 }
 /* mobile */
 @media (max-width: 600px){
-  .team-viewport{ --card-w:120px; --card-h:155px; --gap:10px; --card-radius:16px; width: calc(3 * var(--card-w) + 2 * var(--gap)); }
+  .team-viewport{ --card-w:120px; --card-h:155px; --gap:5px; --card-radius:16px; width: calc(3 * var(--card-w) + 2 * var(--gap)); }
 }
