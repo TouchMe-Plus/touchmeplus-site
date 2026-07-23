@@ -25,15 +25,15 @@ themeToggle.addEventListener("click", () => {
 });
 document.addEventListener("DOMContentLoaded", function(){
   var team = [
-    { img:"assets/images/3.png",  name:"Aasir",  role:"CEO" },
+    { img:"assets/images/1.png",  name:"Aasir",  role:"CEO" },
     { img:"assets/images/2.png",  name:"Hafil",  role:"Application Support & Maintenance" },
-    { img:"assets/images/1.png",  name:"Imadh",  role:"Overall Supervisor" },
-    { img:"assets/images/4.png",  name:"Ayman",  role:"Marketing Manager" },
-    { img:"assets/images/5.png",  name:"Wajith", role:"Web Development" },
+    { img:"assets/images/3.png",  name:"Imadh",  role:"Overall Supervisor" },
+    { img:"assets/images/4.png",  name:"Wajith", role:"Web Development" },
+    { img:"assets/images/5.png",  name:"Ayman",  role:"Marketing Manager" },
     { img:"assets/images/6.png",  name:"Akeeb",  role:"External Communications & Partnerships" },
     { img:"assets/images/7.png",  name:"Jaasim", role:"Administrator" },
-    { img:"assets/images/10.png", name:"Arshad", role:"Head of Room Booking Operations" },
-    { img:"assets/images/10.png", name:"Arshad", role:"Head of Bus Booking Operations" }
+    { img:"assets/images/8.png", name:"Arshad", role:"Head of Room Booking Operations" },
+    { img:"assets/images/8.png", name:"Arshad", role:"Head of Bus Booking Operations" }
   ];
 
   var track = document.getElementById("teamTrack");
