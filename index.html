@@ -376,74 +376,152 @@
   </div>
 </section>
 
-<section class="section" id="team">
-  <div class="container">
-    
-    <div class="section__head">
-      <h2>Meet Our Team</h2>
-      <p>The people behind TouchMe+</p>
-    </div>
+<!-- =========================
+     MEET OUR TEAM
+========================== -->
 
-    <div class="team-grid">
+<section class="section team-section" id="team">
 
-      <div class="team-member">
-        <img src="assets/images/3.png" alt="Employee 1">
-        <h4>Aasir</h4>
-        <p>CEO</p>
-      </div>
+    <div class="container">
 
-      <div class="team-member">
-        <img src="assets/images/2.png" alt="Employee 2">
-        <h4>Hafil</h4>
-        <p>Application Support & Maintenance</p>
-      </div>
+        <div class="section__head">
+            <h2>Meet Our Team</h2>
+            <p>The people behind TouchMe+</p>
+        </div>
 
-      <div class="team-member">
-        <img src="assets/images/1.png" alt="Employee 3">
-        <h4>Imadh</h4>
-        <p>Overall Supervisor</p>
-      </div>
+        <div class="team-showcase">
 
-      <div class="team-member">
-        <img src="assets/images/4.png" alt="Employee 4">
-        <h4>Ayman</h4>
-        <p>Marketing Manager</p>
-      </div>
+            <div class="gold-border"></div>
 
-      <div class="team-member">
-        <img src="assets/images/5.png" alt="Employee 5">
-        <h4>Wajith</h4>
-        <p>Web Development</p>
-      </div>
+            <div class="team-content">
 
-      <div class="team-member">
-        <img src="assets/images/6.png" alt="Employee 6">
-        <h4>Akeeb</h4>
-        <p>External Communications & Partnerships</p>
-      </div>
+                <div class="team-image-wrapper">
+                    <img
+                        id="teamImage"
+                        src="assets/images/3.png"
+                        alt="Team Member"
+                        class="team-photo">
+                </div>
 
-      <div class="team-member">
-        <img src="assets/images/7.png" alt="Employee 7">
-        <h4>Jaasim</h4>
-        <p>Administrator</p>
-      </div>
+                <div class="team-info">
 
-      <div class="team-member">
-        <img src="assets/images/10.png" alt="Employee 8">
-        <h4>Arshad</h4>
-        <p>Head of Room Booking Operations</p>
-      </div>
+                    <h3 id="teamName">
+                        Aasir
+                    </h3>
 
-      <div class="team-member">
-        <img src="assets/images/10.png" alt="Employee 9">
-        <h4>Arshad</h4>
-        <p>Head of Bus Booking Operations</p>
-      </div>
+                    <p id="teamRole">
+                        CEO
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
-  </div>
 </section>
+
+<script>
+
+const teamMembers = [
+
+{
+name:"Aasir",
+role:"CEO",
+image:"assets/images/3.png"
+},
+
+{
+name:"Hafil",
+role:"Application Support & Maintenance",
+image:"assets/images/2.png"
+},
+
+{
+name:"Imadh",
+role:"Overall Supervisor",
+image:"assets/images/1.png"
+},
+
+{
+name:"Ayman",
+role:"Marketing Manager",
+image:"assets/images/4.png"
+},
+
+{
+name:"Wajith",
+role:"Web Development",
+image:"assets/images/5.png"
+},
+
+{
+name:"Akeeb",
+role:"External Communications & Partnerships",
+image:"assets/images/6.png"
+},
+
+{
+name:"Jaasim",
+role:"Administrator",
+image:"assets/images/7.png"
+},
+
+{
+name:"Arshad",
+role:"Head of Room Booking Operations",
+image:"assets/images/10.png"
+},
+
+{
+name:"Arshad",
+role:"Head of Bus Booking Operations",
+image:"assets/images/10.png"
+}
+
+];
+
+let currentMember = 0;
+
+const image = document.getElementById("teamImage");
+const name = document.getElementById("teamName");
+const role = document.getElementById("teamRole");
+
+function changeMember(){
+
+image.style.opacity="0";
+name.style.opacity="0";
+role.style.opacity="0";
+
+setTimeout(()=>{
+
+currentMember++;
+
+if(currentMember>=teamMembers.length){
+
+currentMember=0;
+
+}
+
+image.src=teamMembers[currentMember].image;
+
+name.textContent=teamMembers[currentMember].name;
+
+role.textContent=teamMembers[currentMember].role;
+
+image.style.opacity="1";
+name.style.opacity="1";
+role.style.opacity="1";
+
+},500);
+
+}
+
+setInterval(changeMember,4000);
+
+</script>
     
   <!-- Footer -->
   <footer class="footer">
